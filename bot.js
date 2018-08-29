@@ -52,7 +52,7 @@ function tweet() {
                 currentGram = tweet.substring(len-order, len);
             }
             console.log(tweet)
-
+            
             Bot.post('statuses/update', {status: tweet}, function(error, tweet, response) {
                 if (error) {
                     console.log("Error making post. ", error.message);
